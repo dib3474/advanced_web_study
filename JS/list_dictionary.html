@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a_list = []  // 리스트를 선언. 변수 이름은 역시 아무렇게나 가능!
+
+        // 또는,
+
+        let b_list = [1, 2, 'hey', 3] // 로 선언 가능
+
+        // 리스트 index로 값 조회하기
+        // 리스트는 순서가 있기 때문에 index라는 숫자로 값을 조회할 수 있어요
+        // index는 0부터 시작한다는 점 잊지 마세요!
+        console.log(b_list[0]) // 1을 출력
+        console.log(b_list[1]) // 2를 출력
+        console.log(b_list[2]) // "hey"를 출력
+
+        // 리스트에 요소 넣기
+        b_list.push('헤이')
+        console.log(b_list) // [1, 2, "hey", 3, "헤이"] 를 출력
+
+        // 리스트의 길이 구하기
+        console.log(b_list.length) // 5를 출력
+
+        names = [{ 'name': 'bob', 'age': 20 }, { 'name': 'carry', 'age': 38 }]
+
+        console.log(names[0]['name']) // 'bob'을 출력
+        console.log(names[1]['name']) // 'carry'을 출력 
+
+
+        new_name = { 'name': 'john', 'age': 7 }
+        names.push(new_name)
+
+        // names의 값은? [{'name':'bob','age':20},{'name':'carry','age':38},{'name':'john','age':7}]
+        console.log(names[2]['name']) // 'john'을 출력 
+    </script>
+</body>
+
+</html>
