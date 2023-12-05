@@ -37,5 +37,17 @@ def movie():
     movie_list = rjson["movieListResult"]["movieList"]
     return render_template('movie.html', data=movie_list)
 
+@app.route('/answer')
+def answer():
+    query = request.args.get('query')
+    if not query:
+        query = 20230601
+    res = requests.get(
+	f"http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt={query}")
+    rjson = res.json()
+    movie_list = rjson['boxOfficeResult']['weeklyBoxOfficeList']
+    
+    return render_template('answer.html', data=movie_list)
+
 if __name__ == '__main__':
     app.run(debug=True)
